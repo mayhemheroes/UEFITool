@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu:20.04 as builder
+FROM --platform=linux/amd64 ubuntu:22.04 as builder
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make cmake git
@@ -9,6 +9,6 @@ RUN git clean -d -f -x
 RUN cmake .
 RUN make
 
-FROM ubuntu:20.04 as package
+FROM ubuntu:22.04 as package
 
 COPY --from=builder /UEFITool /
