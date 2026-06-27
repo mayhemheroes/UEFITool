@@ -1,0 +1,13 @@
+project: uefitool
+target: uefiextract_all
+
+# File-input (CLI) target — the OLD deployed Mayhem target, kept verbatim for parity and
+# Mayhem history (old integration: target `uefiextract_all`, cmd `UEFIExtract @@ all`).
+# UEFIExtract parses a whole UEFI firmware image with the same FfsParser as the libFuzzer
+# harness, then walks/extracts the FFS tree. `all` makes it dump every reconstructed item.
+# @@ is the input-file placeholder (the firmware image). Non-Qt CLI build.
+cmds:
+  - cmd: /mayhem/UEFIExtract/UEFIExtract @@ all
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uefiextract_all/testsuite

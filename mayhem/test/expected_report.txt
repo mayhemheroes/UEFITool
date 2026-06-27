@@ -1,0 +1,6 @@
+        Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+ Image               | UEFI                  | 00000000 | 00002000 | 1D33E089 |  UEFI image
+ Volume              | FFSv2                 | 00000000 | 00002000 | 1D33E089 | - 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+ File                | Freeform              | 00000048 | 00000032 | 5FC0FBF9 | -- 04030201-0605-0807-090A-0B0C0D0E0F10
+ Section             | Raw                   | 00000060 | 0000001A | 0A7B6238 | --- Raw section
+ Free space          |                       | 00000080 | 00001F80 | E1FC11E6 | -- Volume free space
